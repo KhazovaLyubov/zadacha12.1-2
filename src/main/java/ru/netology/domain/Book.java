@@ -19,4 +19,10 @@ public class Book extends Product{
     public void setAuthor(String author) {
         this.author = author;
     }
+
+    @Override
+    public boolean matches(String search) {
+        return super.matches(search) || search.equals(this.author);
+    }
+
 }
